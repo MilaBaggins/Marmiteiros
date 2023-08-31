@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const StyledButtons = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-  padding: 35px;
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 35px;
+  }
 
   .defaultSizeOrange {
     background-color: var(--color-brand-2);

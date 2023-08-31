@@ -24,26 +24,4 @@ export const StyledDivContainer = styled.div`
       height: 100%;
     }
   }
-
-  .whiteDiv {
-    background-color: var(--color-white);
-    margin-left: 25%;
-    width: 390px;
-    height: 580px;
-    opacity: 92%;
-    border-radius: 6px;
-    padding: 30px;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    line-height: 45px;
-    color: var(--color-gray-0);
-    letter-spacing: 1px;
-    display: block;
-    word-wrap: break-word;
-    border: var(--box-shadow-1);
-  }
 `;

@@ -10,12 +10,16 @@ export const LandingPage = () => {
         <img src={logo} alt="" />
         <h1>Plan your food smart & easy!</h1>
         <StyledButtons>
-          <button className=" defaultSizeYellow">Login </button>
-          <div className="span">
-            <span>Are you not a member yet? Register bellow and join us!</span>
-          </div>
+          <div className="buttons">
+            <button className=" defaultSizeYellow">Login </button>
+            <div className="span">
+              <span>
+                Are you not a member yet? Register bellow and join us!
+              </span>
+            </div>
 
-          <button className=" defaultSizeOrange">Cadastre-se </button>
+            <button className=" defaultSizeOrange">Cadastre-se </button>
+          </div>
         </StyledButtons>
       </div>
     </StyledDivContainer>

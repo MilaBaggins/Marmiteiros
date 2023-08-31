@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
 export const StyledDivContainer = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+  background-image: url("../../../src/assets/images/register.jpg");
+  background-size: 100%;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  width: 40vw;
-  height: 100%;
-  align-items: flex-start;
-  margin-left: 30px;
+  justify-content: center;
+  font-family: var(--font-family-1);
+  align-items: center;
 
   img {
-    width: 300px;
-  }
-
-  ul {
-    list-style: square;
+    width: 100%;
+    height: 100%;
   }
 `;
