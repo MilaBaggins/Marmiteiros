@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
-import { FormLog } from "./style";
+import { FormLogin } from "./style";
 import { UserContexts } from "../../../contexts/userContext";
 import { useContext } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "./loginSchema";
-import { IUserLogin } from "../../../interfaces/userInterface";
-
-interface Iloginform {
-  email: string;
-  password: string;
-}
+import { Iloginform } from "../../../interfaces/userInterface";
+import { StyledButtons } from "../../buttons/style";
 
 export const LoginForm = () => {
   const { LoginUser } = useContext(UserContexts);
@@ -22,12 +18,12 @@ export const LoginForm = () => {
   } = useForm<Iloginform>({
     resolver: yupResolver(loginSchema),
   });
-  const submitLogin: SubmitHandler<IUserLogin> = (data) => {
+  const submitLogin: SubmitHandler<Iloginform> = (data) => {
     LoginUser(data);
   };
   return (
-    <FormLog onSubmit={handleSubmit(submitLogin)}>
-      <div className="orangeDetail">
+    <FormLogin onSubmit={handleSubmit(submitLogin)}>
+      <div className="greenDetail">
         <h3>Login</h3>
       </div>
       <div className="formLoginDiv">
@@ -42,12 +38,16 @@ export const LoginForm = () => {
         ></input>
         {errors.password && <h4>{errors.password.message}</h4>}
         <span>Esqueci minha senha</span>
-        <button></button>
-        <p>Ainda não possui conta?</p>
-        <Link to="/register">
-          <button></button>
-        </Link>
+        <StyledButtons>
+          <div className="buttons">
+            <button className="defaultSizeYellow">Entrar</button>
+            <p>Ainda não possui conta?</p>
+            <Link to="/register" className="buttons">
+              <button className="defaultSizeOrange">Cadastre-se</button>
+            </Link>
+          </div>
+        </StyledButtons>
       </div>
-    </FormLog>
+    </FormLogin>
   );
 };

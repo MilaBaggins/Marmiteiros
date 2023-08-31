@@ -5,7 +5,7 @@ export interface iUserProviderProps {
 }
 
 export interface IProviderValue {
-  LoginUser: (formLogin: IUserLogin) => Promise<IuserResponse | undefined>;
+  LoginUser: (formLogin: Iloginform) => Promise<IuserResponse | undefined>;
   user: IuserResponse | null;
   registerUser: (data: IUserRegister) => Promise<void>;
   updateUser: (data: IUserUpdate) => Promise<void>;
@@ -54,7 +54,12 @@ export interface IUserUpdate {
   description: string;
 }
 
-export interface IUserLogin {
+/* export interface IUserLogin {
+  email: string;
+  password: string;
+} */
+
+export interface Iloginform {
   email: string;
   password: string;
 }

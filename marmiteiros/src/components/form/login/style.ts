@@ -1,33 +1,36 @@
 import styled from "styled-components";
 
-export const FormLog = styled.form`
+export const FormLogin = styled.form`
   position: fixed;
   display: flex;
-  width: 90%;
   height: 70%;
-  max-width: 310px;
+  min-width: 330px;
   flex-direction: column;
   border-radius: 4px;
   gap: 20px;
-  margin: 0 auto;
-  margin-top: 70px;
+  margin-left: 350px;
   background-color: var(--color-white);
 
-  position: fixed;
-  top: 10%;
-  left: 0%;
-  right: 0%;
-  bottom: 0%;
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    height: 110px;
+    button {
+      width: 100%;
+    }
+  }
 
-  .orangeDetail {
-    width: 80%;
+  .greenDetail {
+    width: 60%;
     border-radius: 0pc 4px 4px 0px;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    background-color: orange;
+    background-color: var(--color-brand-3);
   }
 
   h3 {
@@ -39,7 +42,6 @@ export const FormLog = styled.form`
   }
 
   .formLoginDiv {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -82,5 +84,6 @@ export const FormLog = styled.form`
     line-height: 18px;
     color: var(--color-gray-2);
     text-align: center;
+    margin-top: 22px;
   }
 `;
