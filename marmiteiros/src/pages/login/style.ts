@@ -12,16 +12,7 @@ export const StyledDivContainer = styled.div`
   font-family: var(--font-family-1);
   align-items: center;
 
-  .woodDiv {
-    width: 35%;
-    background-color: #371a00;
-    position: fixed;
-    left: 65%;
-    height: 100vh;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
+  .black {
+    opacity: 30%;
   }
 `;

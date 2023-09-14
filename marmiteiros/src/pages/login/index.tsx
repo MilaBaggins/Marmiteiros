@@ -1,14 +1,13 @@
 import { StyledDivContainer } from "./style";
-import wood from "../../assets/images/loginWood.jpg";
 import { LoginForm } from "../../components/form/login";
+import black from "../../assets/images/black_background.png";
 /* import { StyledButtons } from "../../components/buttons/style"; */
 
 export const LoginPage = () => {
   return (
     <StyledDivContainer>
-      <div className="woodDiv">
-        <img src={wood} alt="" />
-      </div>
+      <img src={black} className="black" alt="" />
+
       <LoginForm />
     </StyledDivContainer>
   );

@@ -28,21 +28,9 @@ export interface IuserResponse {
 export interface IUserRegister {
   name: string;
   email: string;
-  cpf: string;
-  phone: string;
-  birth_date: string;
-  description: string;
-  address: {
-    zip_code: string;
-    state: string;
-    city: string;
-    street: string;
-    number: string;
-    complement: string;
-  };
+  img: string;
   password: string;
   confirmPassword: string;
-  is_seller: boolean;
 }
 
 export interface IUserUpdate {

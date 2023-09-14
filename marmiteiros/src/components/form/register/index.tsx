@@ -1,33 +1,19 @@
-import { Form } from "..";
-import { Input } from "../../Input";
+import { StyledFormRegister } from "../register/style";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Button } from "../../Buttons";
 import { registerSchema } from "./registerSchema";
-import { useContext, useState } from "react";
-import { InputGroup } from "../../Input/style";
-import { Container } from "./style";
+import { useContext } from "react";
 import { UserContexts } from "../../../contexts/userContext";
 import { IUserRegister } from "../../../interfaces/userInterface";
+import { StyledButtons } from "../../buttons/style";
+import { Link } from "react-router-dom";
 
 interface iFormResgister {
   name: string;
   email: string;
-  cpf: string;
-  phone: string;
-  birth_date: string;
-  description: string;
-  address: {
-    zip_code: string;
-    state: string;
-    city: string;
-    street: string;
-    number: string;
-    complement: string;
-  };
+  img: string;
   password: string;
   confirmPassword: string;
-  is_seller: boolean;
 }
 
 export const FormRegister = () => {
@@ -49,53 +35,64 @@ export const FormRegister = () => {
   };
 
   return (
-    <Container>
-      <Form title="Cadastro" onSubmit={handleSubmit(handleRegisterUser)}>
-        <h3 className="font-body-2-500">Informações Pessoais</h3>
+    <StyledFormRegister onSubmit={handleSubmit(handleRegisterUser)}>
+      <div className="greenDetail">
+        <h2>Cadastro</h2>
+      </div>
 
-        <Input
-          label="Nome"
-          register={register("name")}
-          placeholder="Ex: Samuel Leão"
-          error={errors.name && errors.name.message}
-        />
-        <Input
-          label="E-mail"
-          register={register("email")}
-          placeholder="Ex: samuel@kenzie.com.br"
-          error={errors.email && errors.email.message}
-          type="email"
-        />
+      <div className="inputs">
+        <div className="inputsNameEmailUrl">
+          <label htmlFor="name">Nome</label>
+          <input type="name" placeholder="Nome" {...register("name")}></input>
+          {errors.name && <h4>{errors.name.message}</h4>}
 
-        <Input
-          label="Imagem de Perfil"
-          register={register("img")}
-          placeholder="ex: https://image.jpg "
-          error={errors.img && errors.img.message}
-        />
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            placeholder="Email"
+            {...register("email")}
+          ></input>
+          {errors.email && <h4>{errors.email.message}</h4>}
 
-        <Input
-          label="Senha"
-          register={register("password")}
-          placeholder="Digitar Senha"
-          type="password"
-          error={errors.password && errors.password.message}
-        />
-        <Input
-          label="Confirmar Senha"
-          register={register("confirmPassword")}
-          placeholder="Confirmar Senha"
-          type="password"
-          error={errors.confirmPassword && errors.confirmPassword.message}
-        />
+          <label htmlFor="img">Imagem de Perfil</label>
+          <input
+            type="img"
+            placeholder="URL da imagem"
+            {...register("img")}
+          ></input>
+          {errors.img && <h4>{errors.img.message}</h4>}
+        </div>
 
-        <Button
-          type="submit"
-          color="brand1"
-          size="large"
-          content="Finalizar Cadastro"
-        />
-      </Form>
-    </Container>
+        <div className="inputsPassword">
+          <label htmlFor="senha">Senha</label>
+          <input
+            type="password"
+            placeholder="Digite sua senha"
+            {...register("password")}
+          ></input>
+          {errors.password && <h4>{errors.password.message}</h4>}
+
+          <label htmlFor="confirmPassword">Confirme a senha</label>
+          <input
+            type="confirmPassword"
+            placeholder="Digite sua senha novamente"
+            {...register("confirmPassword")}
+          ></input>
+          {errors.confirmPassword && <h4>{errors.confirmPassword.message}</h4>}
+        </div>
+      </div>
+
+      <StyledButtons>
+        <div className="containerButtons">
+          <div className="buttons">
+            <button className="defaultSizeYellow">Cadastrar</button>
+            <p>Já possui uma conta?</p>
+            <Link to="/login" className="buttons">
+              <button className="defaultSizeOrange">Ir para o Login </button>
+            </Link>
+          </div>
+        </div>
+      </StyledButtons>
+    </StyledFormRegister>
   );
 };

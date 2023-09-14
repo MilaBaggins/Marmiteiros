@@ -1,44 +1,48 @@
 import styled from "styled-components";
 
-export const FormLogin = styled.form`
+export const StyledFormLogin = styled.form`
   position: fixed;
   display: flex;
-  height: 70%;
-  min-width: 330px;
+  height: 530px;
+  min-width: 400px;
   flex-direction: column;
-  border-radius: 4px;
+  border-radius: 22px;
   gap: 20px;
   margin-left: 350px;
-  background-color: var(--color-white);
+  background-color: var(--color-gray-7);
+  opacity: 70%;
 
   .buttons {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 0px;
     height: 110px;
+    min-width: 100%;
     button {
       width: 100%;
     }
   }
 
   .greenDetail {
-    width: 60%;
+    width: 65%;
     border-radius: 0pc 4px 4px 0px;
     height: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin-top: 40px;
-    background-color: var(--color-brand-3);
+    margin-top: 60px;
+    padding-left: 35px; /* 
+    background-color: var(--color-brand-3); */
   }
 
-  h3 {
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 8px;
+  h2 {
+    font-weight: lighter;
+    font-size: 22px;
+    letter-spacing: 3px;
     line-height: 30px;
-    color: var(--color-white);
+    color: var(--color-gray-1);
   }
 
   .formLoginDiv {
@@ -75,7 +79,7 @@ export const FormLogin = styled.form`
     width: 100%;
     max-width: 300px;
     @media (min-width: 768px) {
-      margin-left: 120px;
+      margin-left: 160px;
     }
   }
   p {
@@ -84,6 +88,7 @@ export const FormLogin = styled.form`
     line-height: 18px;
     color: var(--color-gray-2);
     text-align: center;
-    margin-top: 22px;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 `;
