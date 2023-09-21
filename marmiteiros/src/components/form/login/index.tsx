@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FormLogin } from "./style";
+import { StyledFormLogin } from "./style";
 import { UserContexts } from "../../../contexts/userContext";
 import { useContext } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -22,9 +22,9 @@ export const LoginForm = () => {
     LoginUser(data);
   };
   return (
-    <FormLogin onSubmit={handleSubmit(submitLogin)}>
+    <StyledFormLogin onSubmit={handleSubmit(submitLogin)}>
       <div className="greenDetail">
-        <h3>Login</h3>
+        <h2>Login</h2>
       </div>
       <div className="formLoginDiv">
         <label htmlFor="email">Email</label>
@@ -48,6 +48,6 @@ export const LoginForm = () => {
           </div>
         </StyledButtons>
       </div>
-    </FormLogin>
+    </StyledFormLogin>
   );
 };

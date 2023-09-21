@@ -1,21 +1,23 @@
 import styled from "styled-components";
 
 export const StyledButtons = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  /* 
   .buttons {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
-    padding: 35px;
-  }
+    background-color: blue;
+  } */
 
   .defaultSizeOrange {
     background-color: var(--color-brand-2);
     color: var(--color-white);
     border-radius: 6px;
-    width: 80%;
+    width: 100%;
   }
 
   .span {
@@ -30,14 +32,16 @@ export const StyledButtons = styled.div`
     background-color: var(--color-brand-1);
     color: var(--color-gray-1);
     border-radius: 6px;
-    width: 80%;
+    width: 100%;
   }
 
   .smallSizeOrange {
     background-color: var(--color-brand-2);
-    padding: 4px 1px 4px 1px;
+    padding: 5px;
     border-radius: 8px;
-    width: 10%;
+    width: 30px;
+    color: var(--color-white);
+    font-size: var(--font-size-9);
   }
 
   .smallTransparent {
@@ -46,14 +50,15 @@ export const StyledButtons = styled.div`
     font-family: var(--font-family-1);
     color: var(--color-white);
     letter-spacing: 3px;
-    font-size: var(--font-size-9);
+    font-size: var(--font-size-8);
   }
 
   .menuTransparent {
-    font-weight: lighter;
-    font-family: var(--font-family-1);
+    font-weight: var(--font-weigth-4);
+    font-family: "Poppins", sans-serif;
     color: var(--color-white);
-    letter-spacing: 3px;
-    font-size: var(--font-size-6);
+    letter-spacing: 4px;
+    font-size: var(--font-size-7);
+    background-color: transparent;
   }
 `;

@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import {
   IProviderValue,
-  IUserLogin,
+  Iloginform,
   IUserRegister,
   IUserUpdate,
   IuserResponse,
@@ -63,7 +63,7 @@ export const UserProviders = ({ children }: iUserProviderProps) => {
     }
   };
 
-  const LoginUser = async (formLogin: IUserLogin) => {
+  const LoginUser = async (formLogin: Iloginform) => {
     try {
       const response = await api.post<IuserResponse>("login", formLogin);
 

@@ -153,6 +153,24 @@ export const StyledGlobals = createGlobalStyle`
   color: white;
 }
 
+   .week::-webkit-scrollbar-track {
+      background-color:#f9e9f9;
+      border-radius:8px;
+      margin-left: 22px;
+    }
+
+    .week::-webkit-scrollbar {
+      width: 0.4375rem;
+      height: 10px;
+      border-radius:8px;
+    }
+
+    .week::-webkit-scrollbar-thumb {
+      background: #d3d3d3;
+      border-radius:8px;
+      
+    }
+
 
 ::-webkit-scrollbar-track { 
   background-color: #fff;
